@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.22)
 project(METIS C)
 
 set(SHARED FALSE CACHE BOOL "build a shared library")
 
-if(MSVC)
+if(0)
   set(METIS_INSTALL FALSE)
 else()
   set(METIS_INSTALL TRUE)

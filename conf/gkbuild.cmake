@@ -16,7 +16,6 @@ option(GKRAND "enable GKRAND support" OFF)
 
 # Add compiler flags.
 if(MSVC)
-  set(GK_COPTS "/Ox")
   set(GK_COPTIONS "-DWIN32 -DMSC -D_CRT_SECURE_NO_DEPRECATE -DUSE_GKREGEX")
 elseif(MINGW)
   set(GK_COPTS "-DUSE_GKREGEX")
@@ -43,7 +42,7 @@ endif(VALGRIND)
       set(GK_COPTIONS "${GK_COPTIONS} -fPIC")
   endif(NOT MINGW)
 # GCC warnings.
-  set(GK_COPTIONS "${GK_COPTIONS} -Werror -Wall -pedantic -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -Wno-unused-label")
+  set(GK_COPTIONS "${GK_COPTIONS} -Wall -pedantic -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -Wno-unused-label")
 elseif(${CMAKE_C_COMPILER_ID} MATCHES "Sun")
 # Sun insists on -xc99.
   set(GK_COPTIONS "${GK_COPTIONS} -xc99")
@@ -74,7 +73,7 @@ endif(OPENMP)
 if(GDB)
   set(GK_COPTS "${GK_COPTS} -g")
   set(GK_COPTIONS "${GK_COPTIONS} -Werror")
-else()
+elseif(0)
   set(GK_COPTS "-O3")
 endif(GDB)
 
