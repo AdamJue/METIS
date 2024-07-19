@@ -27,9 +27,9 @@ if(CYGWIN)
 endif(CYGWIN)
 if(CMAKE_COMPILER_IS_GNUCC)
 # GCC opts.
-  set(GK_COPTIONS "${GK_COPTIONS} -std=c99 -fno-strict-aliasing")
+  set(GK_COPTIONS "${GK_COPTIONS} -std=c99")
 if(VALGRIND)
-  set(GK_COPTIONS "${GK_COPTIONS} -march=x86-64 -mtune=generic")
+  set(GK_COPTIONS "${GK_COPTIONS} -march=x86-64")
 else()
 # -march=native is not a valid flag on PPC:
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "power|ppc|powerpc|ppc64|powerpc64" OR (APPLE AND CMAKE_OSX_ARCHITECTURES MATCHES "ppc|ppc64"))
