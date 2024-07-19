@@ -3,10 +3,10 @@ include(CheckFunctionExists)
 include(CheckIncludeFile)
 
 # Setup options.
-option(GDB "enable use of GDB" OFF)
+option(GDB "enable use of GDB" On)
 option(ASSERT "turn asserts on" OFF)
 option(ASSERT2 "additional assertions" OFF)
-option(DEBUG "add debugging support" OFF)
+option(DEBUG "add debugging support" On)
 option(GPROF "add gprof support" OFF)
 option(VALGRIND "add valgrind support" On)
 option(OPENMP "enable OpenMP support" OFF)
