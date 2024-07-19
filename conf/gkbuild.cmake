@@ -72,7 +72,7 @@ endif(OPENMP)
 # Add various definitions.
 if(GDB)
   set(GK_COPTS "${GK_COPTS} -g")
-  set(GK_COPTIONS "${GK_COPTIONS} -Werror")
+ # set(GK_COPTIONS "${GK_COPTIONS} -Werror")
 else()
   set(GK_COPTS "-O0")
 endif(GDB)
