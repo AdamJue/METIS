@@ -74,7 +74,7 @@ if(GDB)
   set(GK_COPTS "${GK_COPTS} -g")
   set(GK_COPTIONS "${GK_COPTIONS} -Werror")
 else()
-  set(GK_COPTS "-O3")
+  set(GK_COPTS "-O0")
 endif(GDB)
 
 
